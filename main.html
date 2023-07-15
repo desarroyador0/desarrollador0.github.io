@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frases de Vida Espiritual</title>
+   <meta encode="utf-8"/> 
+<script type="text/javascript">
+        function generarFrase() {
+            var frases = [
+                "La vida espiritual es el camino hacia la paz interior.",
+                "La espiritualidad nos conecta con algo más grande que nosotros mismos.",
+                "La vida espiritual nos ayuda a encontrar nuestro propósito en este mundo.",
+                "La espiritualidad es el arte de vivir en armonía con nuestro ser interior.",
+                "El crecimiento espiritual requiere tiempo y dedicación.",
+                "La vida espiritual nos invita a explorar la naturaleza de nuestra existencia.",
+                "La espiritualidad es un viaje sin fin hacia la sabiduría y la compasión.",
+                "La vida espiritual nos enseña a vivir con gratitud y amor.",
+                "La espiritualidad nos ayuda a encontrar significado en momentos de adversidad.",
+                "El despertar espiritual es el comienzo de una nueva realidad."
+            ];
+
+            var numero = parseInt(document.getElementById("numero").value);
+
+            if (isNaN(numero) || numero < 1 || numero > frases.length) {
+                document.getElementById("resultado").innerHTML = "Por favor, ingresa un número válido.";
+            } else {
+                document.getElementById("resultado").innerHTML = frases[numero - 1];
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Frases de Vida Espiritual</h1>
+    <p>Ingresa un número entre 1 y 10 para obtener una frase relacionada con la vida espiritual:</p>
+    <input type="text" id="numero">
+    <button onclick="generarFrase()">Generar</button>
+    <p id="resultado"></p>
+</body>
+</html>
+
